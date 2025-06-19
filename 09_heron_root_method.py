@@ -1,5 +1,5 @@
 '''
-Pflichtaufgabe 7 behandelt das Heron-Verfahren (auch bekannt als Babylonisches Wurzelziehen), 
+Pflichtaufgabe 9 behandelt das Heron-Verfahren (auch bekannt als Babylonisches Wurzelziehen), 
 eine Methode zur iterativen oder rekursiven Approximation der Quadratwurzel einer Zahl a > 0.
 Ziel ist der Vergleich zwischen einer iterativen und einer rekursiven Implementierung.
 '''
