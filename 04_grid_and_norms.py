@@ -1,5 +1,5 @@
 ###############################################################################
-# Aufgabe 3: Vektornormen, Listen und Visualisierung der Gitterpunkte
+# Aufgabe 4: Vektornormen, Listen und Visualisierung der Gitterpunkte
 ###############################################################################
 import math  # Pour les opérations mathématiques (racine carrée, etc.)
 import matplotlib.pyplot as plt  # Pour la visualisation
