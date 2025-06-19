@@ -1,5 +1,5 @@
 '''
-Pflichtaufgabe 8 untersucht die Berechnung der Eigenwerte einer Matrix A und einer 
+Pflichtaufgabe 6 untersucht die Berechnung der Eigenwerte einer Matrix A und einer 
 ähnlichen Matrix B = T⁻¹ A T. Es werden die charakteristischen Polynome von A und B 
 bestimmt, deren Nullstellen als numerische Eigenwerte berechnet und mit den 
 direkten Eigenwerten aus SymPy verglichen. Die Eigenwerte werden in der 
