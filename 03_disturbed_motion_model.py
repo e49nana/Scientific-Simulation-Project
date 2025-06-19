@@ -1,5 +1,5 @@
 ###############################################################################
-# Aufgabe02
+# Aufgabe 03
 ###############################################################################
 import matplotlib.pyplot as plt  # für Listen
 import sympy as sy  # für symbolische Rechnungen
