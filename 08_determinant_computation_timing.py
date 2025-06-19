@@ -1,5 +1,5 @@
 '''
-Pflichtaufgabe 10 vergleicht drei Methoden zur Berechnung der Determinante einer Matrix: 
+Pflichtaufgabe 8 vergleicht drei Methoden zur Berechnung der Determinante einer Matrix: 
 die rekursive Laplace-Entwicklung, die symbolische Berechnung mit SymPy und die numerische 
 Berechnung mit NumPy. Ziel ist es, den Rechenaufwand und die Genauigkeit zu untersuchen.
 '''
