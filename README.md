@@ -125,7 +125,7 @@ Scientific-Simulation-Project/
 Applied Mathematics & Physics @ TH Nürnberg  
 
 [![GitHub](https://img.shields.io/badge/GitHub-e49nana-181717?style=flat&logo=github)](https://github.com/e49nana)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/emmanuel-nana-nana)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/emmanuel-nana)
 
 ---
 
