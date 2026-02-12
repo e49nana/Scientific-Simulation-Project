@@ -1,66 +1,56 @@
-# 🔬 Scientific Simulation with Python
+<div align="center">
 
-[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white)](https://python.org)
-[![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-F37626?style=flat&logo=jupyter&logoColor=white)](https://jupyter.org)
-[![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)](https://numpy.org)
-[![SymPy](https://img.shields.io/badge/SymPy-3B5526?style=flat&logo=sympy&logoColor=white)](https://sympy.org)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+<!-- HEADER -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a1b27,100:1f6feb&height=180&section=header&text=Scientific%20Simulation%20Project&fontSize=36&fontColor=58a6ff&fontAlignY=35&desc=Numerical%20Computing%20%E2%80%A2%20Symbolic%20Math%20%E2%80%A2%20Scientific%20Visualization&descSize=15&descColor=8b949e&descAlignY=55&animation=fadeIn" width="100%"/>
 
-> Numerical, symbolic, and computational mathematics exercises from the **"Einführung in Simulationstools"** course at **TH Nürnberg**.
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](#)
+[![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)](#)
+[![SymPy](https://img.shields.io/badge/SymPy-3B5526?style=for-the-badge&logo=sympy&logoColor=white)](#)
+[![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-58a6ff?style=for-the-badge)](LICENSE)
 
----
-
-## 🎯 Goals
-
-- Strengthen core skills in **numerical precision** and **approximation theory**
-- Master **differential equations** and **symbolic mathematics**
-- Develop intuition through **scientific visualization**
+</div>
 
 ---
 
-## 📚 Contents
+## 📖 About
+
+Computational mathematics projects and exercises from **"Einführung in Simulationstools"** (Introduction to Simulation Tools) at **TH Nürnberg**, as part of my B.Sc. in Applied Mathematics & Physics.
+
+This repository covers three pillars of scientific computing: **numerical precision**, **symbolic computation**, and **matrix analysis** — each implemented as interactive Jupyter notebooks with visualizations.
+
+---
+
+## 📚 Notebooks
 
 ### 🧮 Numerical Precision & Fundamentals
-| # | Topic | Notebook |
-|---|-------|----------|
-| 1 | Floating-point precision, Decimal & Rational arithmetic | `floating_point.ipynb` |
-| 2 | Numerical differentiation & subtraction cancellation | `subtraction_cancellation.ipynb` |
-| 3 | Heron's method (Babylonian) for square roots | `heron_method.ipynb` |
+
+| # | Topic | Notebook | Key Concepts |
+|:-:|-------|----------|-------------|
+| 1 | Floating-point arithmetic | `floating_point.ipynb` | IEEE 754, `Decimal` & `Rational`, machine epsilon |
+| 2 | Numerical differentiation | `subtraction_cancellation.ipynb` | Cancellation error, step-size optimization |
+| 3 | Heron's method | `heron_method.ipynb` | Babylonian algorithm, convergence rate analysis |
 
 ### 📈 Symbolic Computation & Analysis
-| # | Topic | Notebook |
-|---|-------|----------|
-| 4 | Symbolic modeling of disturbed motion | `disturbed_motion.ipynb` |
-| 5 | Curvature of exponential functions | `curvature_exponential.ipynb` |
-| 6 | Taylor series approximation errors | `taylor_errors.ipynb` |
-| 10 | Plotting functions & tangents with SymPy | `functions_tangents_sympy.ipynb` |
+
+| # | Topic | Notebook | Key Concepts |
+|:-:|-------|----------|-------------|
+| 4 | Disturbed motion | `disturbed_motion.ipynb` | ODE modeling with SymPy, perturbation analysis |
+| 5 | Curvature analysis | `curvature_exponential.ipynb` | κ(x) for exponential families, osculating circles |
+| 6 | Taylor approximation | `taylor_errors.ipynb` | Remainder bounds, convergence radius |
+| 10 | Functions & tangents | `functions_tangents_sympy.ipynb` | Symbolic derivatives, tangent-line plotting |
 
 ### 📊 Grids, Norms & Matrix Computations
-| # | Topic | Notebook |
-|---|-------|----------|
-| 7 | Grid generation & norm comparisons | `grid_generation.ipynb` |
-| 8 | Eigenvalue sensitivity to matrix similarity | `matrix_eigen_sensitivity.ipynb` |
-| 9 | Comparison of determinant computation methods | `determinant_comparison.ipynb` |
+
+| # | Topic | Notebook | Key Concepts |
+|:-:|-------|----------|-------------|
+| 7 | Grid generation | `grid_generation.ipynb` | Uniform & Chebyshev nodes, L¹/L²/L∞ norms |
+| 8 | Eigenvalue sensitivity | `matrix_eigen_sensitivity.ipynb` | Condition numbers, similarity transforms |
+| 9 | Determinant methods | `determinant_comparison.ipynb` | Cofactor vs LU vs Bareiss, O(n!) vs O(n³) |
 
 ---
 
-## 🚀 Quick Start
-
-```bash
-# Clone the repository
-git clone https://github.com/e49nana/Scientific-Simulation-Project.git
-cd Scientific-Simulation-Project
-
-# Install dependencies
-pip install numpy sympy matplotlib jupyter
-
-# Launch Jupyter
-jupyter notebook
-```
-
----
-
-## 📦 Project Structure
+## 🏗️ Project Structure
 
 ```
 Scientific-Simulation-Project/
@@ -73,66 +63,99 @@ Scientific-Simulation-Project/
 ├── symbolic_math/
 │   ├── disturbed_motion.ipynb
 │   ├── curvature_exponential.ipynb
-│   └── taylor_errors.ipynb
+│   ├── taylor_errors.ipynb
+│   └── functions_tangents_sympy.ipynb
 │
 ├── grids_and_matrices/
 │   ├── grid_generation.ipynb
 │   ├── matrix_eigen_sensitivity.ipynb
 │   └── determinant_comparison.ipynb
 │
-├── visualization/
-│   └── functions_tangents_sympy.ipynb
+├── utils/
+│   └── numerical_differentiation.py
 │
-└── utils/                          # ⬅️ NEW: Reusable modules
-    └── numerical_differentiation.py
+├── LICENSE
+└── README.md
+```
+
+---
+
+## 🚀 Quick Start
+
+```bash
+# Clone
+git clone https://github.com/e49nana/Scientific-Simulation-Project.git
+cd Scientific-Simulation-Project
+
+# Install dependencies
+pip install numpy sympy matplotlib jupyter
+
+# Launch
+jupyter notebook
 ```
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Tool | Usage |
-|------|-------|
+<div align="center">
+
+| Tool | Role |
+|------|------|
 | **Python 3.10+** | Core language |
-| **NumPy** | Numerical computation |
-| **SymPy** | Symbolic algebra & calculus |
-| **Matplotlib** | Scientific visualization |
-| **Jupyter** | Interactive notebooks |
+| **NumPy** | Numerical arrays & linear algebra |
+| **SymPy** | Symbolic differentiation, integration, series |
+| **Matplotlib** | Publication-quality plots |
+| **Jupyter** | Interactive exploration & documentation |
 
----
-
-## 📖 Learning Outcomes
-
-- ✅ Understanding numerical stability and floating-point limitations
-- ✅ Applying symbolic computation to real physical systems
-- ✅ Analyzing matrix sensitivity and numerical errors
-- ✅ Visualizing mathematical concepts for deeper intuition
+</div>
 
 ---
 
 ## 🗺️ Roadmap
 
-- [ ] Add Heat Equation solver (FD/FEM)
-- [ ] Image compression using SVD
-- [ ] ODE solvers comparison (Euler vs RK4)
-- [ ] Interactive visualizations with Plotly
+Upcoming projects that will extend this repository into a full scientific computing portfolio:
+
+- [x] Numerical precision & floating-point analysis
+- [x] Symbolic computation & ODE modeling
+- [x] Matrix computations & eigenvalue sensitivity
+- [ ] 🔥 **Heat Equation Solver** — Finite Differences (explicit/implicit) + FEM with animated 2D visualization
+- [ ] 🖼️ **Image Compression via SVD** — Low-rank approximation, PSNR analysis, Eckart-Young theorem
+- [ ] 🌍 **COVID-19 Spatial Analysis** *(R)* — Moran's I, LISA clusters, Getis-Ord Gi*, bivariate choropleth maps
+- [ ] ⚡ **ODE Solvers Comparison** — Euler vs RK4 vs adaptive methods, stability regions
+- [ ] 📐 **PDE-Constrained Optimization** — Adjoint method, gradient-based solvers
+
+---
+
+## 📖 Learning Outcomes
+
+Each notebook builds intuition through implementation:
+
+- **Numerical stability** — Why does $(f(x+h)-f(x))/h$ fail for very small $h$? Explored with real floating-point experiments.
+- **Symbolic → Numeric bridge** — Model a system symbolically with SymPy, then discretize and solve numerically with NumPy.
+- **Matrix conditioning** — How a tiny perturbation in $A$ can cause a huge shift in its eigenvalues.
+- **Visualization as understanding** — Every concept is accompanied by plots that reveal the underlying mathematics.
 
 ---
 
 ## 👤 Author
 
 **Emmanuel Nana Nana**  
-Applied Mathematics & Physics @ TH Nürnberg  
+B.Sc. Applied Mathematics & Physics — TH Nürnberg  
+🎯 MSc @ TUM | Exchange @ École Polytechnique (EuroTech)
 
 [![GitHub](https://img.shields.io/badge/GitHub-e49nana-181717?style=flat&logo=github)](https://github.com/e49nana)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/emmanuel-nana)
 
 ---
 
 ## 📄 License
 
-MIT License — feel free to use for educational purposes.
+[MIT License](LICENSE) — free to use for educational purposes.
 
 ---
 
-*✔️ More exercises and visual demonstrations will be added as the course progresses.*
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a1b27,100:1f6feb&height=100&section=footer" width="100%"/>
+
+</div>
