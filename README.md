@@ -21,32 +21,33 @@ This repository covers three pillars of scientific computing: **numerical precis
 
 ---
 
-## 📚 Notebooks
+## 📚 Scripts
 
 ### 🧮 Numerical Precision & Fundamentals
 
 | # | Topic | Notebook | Key Concepts |
 |:-:|-------|----------|-------------|
-| 1 | Floating-point arithmetic | `floating_point.ipynb` | IEEE 754, `Decimal` & `Rational`, machine epsilon |
-| 2 | Numerical differentiation | `subtraction_cancellation.ipynb` | Cancellation error, step-size optimization |
-| 3 | Heron's method | `heron_method.ipynb` | Babylonian algorithm, convergence rate analysis |
+| 01 | Floating-point arithmetic | `numerical_precision/01_precision_comparison.py` | IEEE 754, `Decimal` & `Rational`, machine epsilon |
+| 02 | Numerical differentiation | `numerical_precision/02_numerical_subtraction_cancellation.py` | Cancellation error, step-size optimization |
+| 09 | Heron's method | `numerical_precision/09_heron_root_method.py` | Babylonian algorithm, convergence rate analysis |
 
 ### 📈 Symbolic Computation & Analysis
 
 | # | Topic | Notebook | Key Concepts |
 |:-:|-------|----------|-------------|
-| 4 | Disturbed motion | `disturbed_motion.ipynb` | ODE modeling with SymPy, perturbation analysis |
-| 5 | Curvature analysis | `curvature_exponential.ipynb` | κ(x) for exponential families, osculating circles |
-| 6 | Taylor approximation | `taylor_errors.ipynb` | Remainder bounds, convergence radius |
-| 10 | Functions & tangents | `functions_tangents_sympy.ipynb` | Symbolic derivatives, tangent-line plotting |
+| 03 | Disturbed motion | `symbolic_math/03_disturbed_motion_model.py` | ODE modeling with SymPy, perturbation analysis |
+| 05 | Curvature analysis | `symbolic_math/05_exponential_curvature.py` | κ(x) for exponential families, osculating circles |
+| 06 | Taylor approximation | `symbolic_math/06_taylor_polynomial_error.py` | Remainder bounds, convergence radius |
+| 10 | Functions & tangents | `symbolic_math/10_functions_tangents.py` | Symbolic derivatives, tangent-line plotting |
+| 11 | Direction fields | `symbolic_math/11_richtungsfeld_plotter.py` | ODE direction-field visualization |
 
 ### 📊 Grids, Norms & Matrix Computations
 
 | # | Topic | Notebook | Key Concepts |
 |:-:|-------|----------|-------------|
-| 7 | Grid generation | `grid_generation.ipynb` | Uniform & Chebyshev nodes, L¹/L²/L∞ norms |
-| 8 | Eigenvalue sensitivity | `matrix_eigen_sensitivity.ipynb` | Condition numbers, similarity transforms |
-| 9 | Determinant methods | `determinant_comparison.ipynb` | Cofactor vs LU vs Bareiss, O(n!) vs O(n³) |
+| 04 | Grids & norms | `grids_and_matrices/04_grid_and_norms.py` | Uniform & Chebyshev nodes, L¹/L²/L∞ norms |
+| 07 | Eigenvalue sensitivity | `grids_and_matrices/07_eigenvalue_visualization.py` | Condition numbers, similarity transforms |
+| 08 | Determinant methods | `grids_and_matrices/08_determinant_computation_timing.py` | Cofactor vs LU vs Bareiss, O(n!) vs O(n³) |
 
 ---
 
@@ -55,24 +56,15 @@ This repository covers three pillars of scientific computing: **numerical precis
 ```
 Scientific-Simulation-Project/
 │
-├── numerical_precision/
-│   ├── floating_point.ipynb
-│   ├── subtraction_cancellation.ipynb
-│   └── heron_method.ipynb
+├── numerical_precision/        # 01, 02, 09 — floating point, cancellation, Heron
+├── symbolic_math/              # 03, 05, 06, 10, 11 — SymPy modeling & analysis
+├── grids_and_matrices/         # 04, 07, 08 — norms, eigenvalues, determinants
 │
-├── symbolic_math/
-│   ├── disturbed_motion.ipynb
-│   ├── curvature_exponential.ipynb
-│   ├── taylor_errors.ipynb
-│   └── functions_tangents_sympy.ipynb
+├── SVD_Project/                # Image compression via SVD — GUI app + report (PDF)
+│   ├── svd_compressor.py
+│   └── projektbericht_svd.pdf
 │
-├── grids_and_matrices/
-│   ├── grid_generation.ipynb
-│   ├── matrix_eigen_sensitivity.ipynb
-│   └── determinant_comparison.ipynb
-│
-├── utils/
-│   └── numerical_differentiation.py
+├── Robotic/                    # ExoHand — exoskeleton arm build guides (DE/EN)
 │
 ├── LICENSE
 └── README.md
@@ -88,10 +80,11 @@ git clone https://github.com/e49nana/Scientific-Simulation-Project.git
 cd Scientific-Simulation-Project
 
 # Install dependencies
-pip install numpy sympy matplotlib jupyter
+pip install -r requirements.txt
 
-# Launch
-jupyter notebook
+# Run any script directly, e.g.
+python numerical_precision/01_precision_comparison.py
+python SVD_Project/svd_compressor.py   # SVD compression GUI
 ```
 
 ---
@@ -120,7 +113,7 @@ Upcoming projects that will extend this repository into a full scientific comput
 - [x] Symbolic computation & ODE modeling
 - [x] Matrix computations & eigenvalue sensitivity
 - [ ] 🔥 **Heat Equation Solver** — Finite Differences (explicit/implicit) + FEM with animated 2D visualization
-- [ ] 🖼️ **Image Compression via SVD** — Low-rank approximation, PSNR analysis, Eckart-Young theorem
+- [x] 🖼️ **Image Compression via SVD** — GUI app + written report → [`SVD_Project/`](SVD_Project/)
 - [ ] 🌍 **COVID-19 Spatial Analysis** *(R)* — Moran's I, LISA clusters, Getis-Ord Gi*, bivariate choropleth maps
 - [ ] ⚡ **ODE Solvers Comparison** — Euler vs RK4 vs adaptive methods, stability regions
 - [ ] 📐 **PDE-Constrained Optimization** — Adjoint method, gradient-based solvers
@@ -141,8 +134,7 @@ Each notebook builds intuition through implementation:
 ## 👤 Author
 
 **Emmanuel Nana Nana**  
-B.Sc. Applied Mathematics & Physics — TH Nürnberg  
-🎯 MSc @ TUM | Exchange @ École Polytechnique (EuroTech)
+B.Sc. Applied Mathematics & Physics — TH Nürnberg
 
 [![GitHub](https://img.shields.io/badge/GitHub-e49nana-181717?style=flat&logo=github)](https://github.com/e49nana)
 
